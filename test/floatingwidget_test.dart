@@ -129,27 +129,3 @@ void main() {
     await tester.tap(find.byWidget(body));
   });
 }
-
-class TestApp extends StatefulWidget {
-  const TestApp(this.toast);
-
-  final GFToast toast;
-
-  @override
-  _TestAppState createState() => _TestAppState();
-}
-
-class _TestAppState extends State<TestApp> {
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        home: Scaffold(
-          body: Column(
-            children: [
-              Expanded(
-                child: widget.toast,
-              ),
-            ],
-          ),
-        ),
-      );
-}
