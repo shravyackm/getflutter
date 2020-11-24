@@ -135,27 +135,3 @@ void main() {
     expect(find.byType(GFCheckbox), findsWidgets);
   });
 }
-
-class TestApp extends StatefulWidget {
-  const TestApp(this.listTile);
-
-  final GFListTile listTile;
-
-  @override
-  _TestAppState createState() => _TestAppState();
-}
-
-class _TestAppState extends State<TestApp> {
-  @override
-  Widget build(BuildContext context) => MaterialApp(
-        home: Scaffold(
-          body: Column(
-            children: [
-              Expanded(
-                child: widget.listTile,
-              )
-            ],
-          ),
-        ),
-      );
-}
